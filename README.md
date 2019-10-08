@@ -1,9 +1,9 @@
-## Projet_SegaBank
+# Projet_SegaBank
 
 Gestion de comptes bancaires - SegaBank
 
 
-                                   # Préambule
+                                   **Préambule**
 								   
 L’objectif de ce mini-projet est dans un premier de temps, de vous permettre de montrer vos
 compétences et connaissance en Java et en programmation objet.
@@ -13,7 +13,7 @@ développer l’application suivante une première fois. Ensuite au fur et à me
 « Architecture » vous referez le projet en prenant en compte les nouvelles notions vues.
 
 
-                                   # Le projet
+                                   **Le projet**
 								   
 SegaBank est un nouvel établissement financier qui permet à des particuliers de placer leurs deniers
 personnels et bénéficier d’avantages incroyables. Vous devez développer la première version de leur
@@ -23,10 +23,10 @@ Vous devez donc créer une application qui permet de manipuler différents types
 bancaires : les comptes simples, les comptes épargnes et les comptes payants.
 
 Tous les types de comptes sont caractérisés par :
- Un identifiant et un solde ;
- Un compte peut subir les opérations de versement et de retrait.
- Pour ces deux opérations, il faut connaître le montant de l'opération ;
- Pour consulter un compte on peut faire appel à sa méthode « toString() ».
+- Un identifiant et un solde ;
+- Un compte peut subir les opérations de versement et de retrait.
+- Pour ces deux opérations, il faut connaître le montant de l'opération ;
+- Pour consulter un compte on peut faire appel à sa méthode « toString() ».
 
 Un compte simple est un compte qui possède un découvert. Ce qui signifie que ce compte peut être
 débiteur jusqu'à la valeur du découvert.
@@ -41,14 +41,14 @@ Chaque compte est administré par une et une seule agence. Les agences sont déf
 et une adresse.
 
 
-                                   # Travail à faire
+                                    **Travail à faire**
 								   
- Analyser et concevoir le modèle objets de cette application ;
- Concevoir une base de données pour stoker les informations ;
- Développez une application Java (console) en implémentant les différentes classes et les
+- Analyser et concevoir le modèle objets de cette application ;
+- Concevoir une base de données pour stoker les informations ;
+- Développez une application Java (console) en implémentant les différentes classes et les
 méthodes demandées comme sur l’exemple « book » ;
- Créer un menu "console" avec la gestion des différentes entités (CRUD).
- Implémenter une fonctionnalité d’export en csv des opérations d'un compte.
+- Créer un menu "console" avec la gestion des différentes entités (CRUD).
+- Implémenter une fonctionnalité d’export en csv des opérations d'un compte.
 
 Ce cahier des charges reste volontairement partiel et ouvert. Le but recherché est de connaître ce
 que vous connaissez déjà en développement java et d’établir avec vos solutions, les
