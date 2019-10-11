@@ -30,13 +30,13 @@ public class Compte {
                 '}';
     }
 
-    public double versement(double montant){
+    public void versement(double montant){
         this.setSolde(this.solde += montant);
-        return this.solde += montant;
+        System.out.println("La somme de " + montant + "€ a été versée sur ce compte.");
     }
 
-    public double retrait(double montant){
+    public void retrait(double montant){
         this.setSolde(this.solde -= montant);
-        return this.solde -= montant;
+        System.out.println("La somme de " + montant + "€ a été débitée de ce compte.");
     }
 }
