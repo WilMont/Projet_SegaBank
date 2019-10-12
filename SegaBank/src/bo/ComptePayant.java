@@ -2,8 +2,8 @@ package bo;
 
 public class ComptePayant extends Compte {
 
-    public ComptePayant(int id, double solde) {
-        super(id, solde);
+    public ComptePayant(int id, int agenceID, double solde) {
+        super(id, solde, agenceID);
     }
 
     @Override

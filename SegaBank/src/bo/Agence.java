@@ -4,12 +4,18 @@ public class Agence {
 
     private int id;
     private int code;
-    private int adresse;
+    private String adresse;
 
-    public Agence(int id, int code, int adresse) {
+    public Agence(){};
+
+    public Agence(int id, int code, String adresse) {
         this.id = id;
         this.code = code;
         this.adresse = adresse;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getId() {
@@ -24,11 +30,11 @@ public class Agence {
         this.code = code;
     }
 
-    public int getAdresse() {
+    public String getAdresse() {
         return adresse;
     }
 
-    public void setAdresse(int adresse) {
+    public void setAdresse(String adresse) {
         this.adresse = adresse;
     }
 }

@@ -4,8 +4,8 @@ public class CompteEpargne extends Compte {
 
     private double tauxInteret;
 
-    public CompteEpargne(int id, double solde, double tauxInteret) {
-        super(id, solde);
+    public CompteEpargne(int id, double solde, int agenceID, double tauxInteret) {
+        super(id, solde, agenceID);
         this.tauxInteret = tauxInteret;
     }
 

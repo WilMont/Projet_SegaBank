@@ -4,10 +4,12 @@ public class Compte {
 
     private int id;
     private double solde;
+    private double agenceID;
 
-    public Compte(int id, double solde) {
+    public Compte(int id, double solde, int agenceID) {
         this.id = id;
         this.solde = solde;
+        this.agenceID = agenceID;
     }
 
     public int getId() {
@@ -25,8 +27,9 @@ public class Compte {
     @Override
     public String toString() {
         return "Compte{" +
-                "id= " + id +
-                ", solde= " + solde +
+                "id=" + id +
+                ", solde=" + solde +
+                ", agence=" + agenceID +
                 '}';
     }
 
@@ -38,5 +41,13 @@ public class Compte {
     public void retrait(double montant){
         this.setSolde(this.solde -= montant);
         System.out.println("La somme de " + montant + "€ a été débitée de ce compte.");
+    }
+
+    public double getAgence() {
+        return agenceID;
+    }
+
+    public void setAgence(double agence) {
+        this.agenceID = agenceID;
     }
 }

@@ -4,8 +4,8 @@ public class CompteSimple extends Compte {
 
     private double decouvert;
 
-    public CompteSimple(int id, double solde, double decouvert) {
-        super(id, solde);
+    public CompteSimple(int id, double solde, int agenceID, double decouvert) {
+        super(id, solde, agenceID);
         this.decouvert = decouvert;
     }
 
