@@ -16,6 +16,7 @@ public class AgenceDAL implements IDAO<Long, Agence> {
     private static final String REMOVE_QUERY = "DELETE FROM agence WHERE id = ?";
     private static final String FIND_QUERY = "SELECT * FROM agence WHERE id = ?";
     private static final String FIND_ALL_QUERY = "SELECT * FROM agence";
+    private static final String FIND_LAST_INSERTED_QUERY = "SELECT * FROM agence ORDER BY id DESC LIMIT 1";
 
     @Override
     public void create( Agence agence ) throws SQLException, IOException, ClassNotFoundException {
@@ -42,8 +43,8 @@ public class AgenceDAL implements IDAO<Long, Agence> {
         Connection connection = PersistenceManager.getConnection();
         if ( connection != null ) {
             try ( PreparedStatement ps = connection.prepareStatement( UPDATE_QUERY ) ) {
-                ps.setString( 1, agence.getAdresse() );
-                ps.setInt( 2, agence.getCode() );
+                ps.setInt( 1, agence.getCode() );
+                ps.setString( 2, agence.getAdresse() );
                 ps.setInt( 3, agence.getId() );
                 ps.executeUpdate();
             }
@@ -99,5 +100,23 @@ public class AgenceDAL implements IDAO<Long, Agence> {
             }
         }
         return list;
+    }
+
+    public Agence findLastInserted() throws SQLException, IOException, ClassNotFoundException {
+        Agence agence = null;
+        Connection connection = PersistenceManager.getConnection();
+        if ( connection != null ) {
+            try ( PreparedStatement ps = connection.prepareStatement( FIND_LAST_INSERTED_QUERY ) ) {
+                try ( ResultSet rs = ps.executeQuery() ) {
+                    while ( rs.next() ) {
+                        agence = new Agence();
+                        agence.setId( rs.getInt( "id" ) );
+                        agence.setCode( rs.getInt( "code" ) );
+                        agence.setAdresse( rs.getString( "adresse" ) );
+                    }
+                }
+            }
+        }
+        return agence;
     }
 }

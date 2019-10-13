@@ -4,6 +4,8 @@ public class CompteSimple extends Compte {
 
     private double decouvert;
 
+    public CompteSimple(){};
+
     public CompteSimple(int id, double solde, int agenceID, double decouvert) {
         super(id, solde, agenceID);
         this.decouvert = decouvert;
@@ -30,5 +32,15 @@ public class CompteSimple extends Compte {
                     System.out.println("La somme de " + montant + "€ a été débitée de ce compte.");
                     System.out.println("Solde actuel: " + this.getSolde() + "€.");
                 }
+    }
+
+    @Override
+    public String toString() {
+        return "Compte Simple{" +
+                "id=" + this.getId() +
+                ", solde=" + this.getSolde() +
+                ", agence=" + this.getAgenceID() +
+                ", découvert autorisé=" + this.getDecouvert() + "€" +
+                '}';
     }
 }
