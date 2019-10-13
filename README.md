@@ -1,4 +1,5 @@
 # Projet_SegaBank
+Trello: https://trello.com/b/SXLogO0M/projet-segabank
 
 Gestion de comptes bancaires - SegaBank
 
