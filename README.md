@@ -3,8 +3,10 @@
 Gestion de comptes bancaires - SegaBank
 
 
+
                                    **Préambule**
-								   
+						
+						
 L’objectif de ce mini-projet est dans un premier de temps, de vous permettre de montrer vos
 compétences et connaissance en Java et en programmation objet.
 
